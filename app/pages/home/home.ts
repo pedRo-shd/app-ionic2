@@ -3,6 +3,8 @@ foi importado pelo núcleo do 'angular'), 'NavController' (importado do ionic-an
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { MenuTestPage } from '../menu-test/menu-test';
+
 /* Este @Component é um comando decorator, serve para dizer que a classe HomePage
 representa um componenente, se fosse @Page, serveria para dizer que a classe
 HomePage seria uma pagina...*/
@@ -22,6 +24,11 @@ export class HomePage {
 vai ser o primeiro metodo a ser chamado, podemos usar atributos como: public/
 privade, neste caso é public atributo: navCtrl do tipo: NavController...*/
   constructor(public navCtrl: NavController) {
+
+  }
+
+  pushPage() : void {
+    this.navCtrl.push(MenuTestPage);
 
   }
 }

@@ -1,6 +1,6 @@
 /* Este é o arquivo que inicializa nossa aplicação*/
 import { Component } from '@angular/core';
-import { ionicBootstrap, Platform } from 'ionic-angular';
+import { ionicBootstrap, Platform, MenuController} from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { HomePage } from './pages/home/home';
@@ -13,15 +13,16 @@ import {MenuTestPage } from './pages/menu-test/menu-test';
   templateUrl: 'build/app.html'
 })
 export class MyApp {
-  /* Importa a pagina HomePage*/
+  //Objeto criado com atributos para paginas .html
   pages: Array<{component: any, title: string, icon: string}>;
   rootPage: any = HomePage;
 
 /* Este construtor faz a verificação se a plataforma ja está disponivel
 fala que o StatusBar é um estilo default */
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, private menuCtrl: MenuController) {
 
     this.pages = [
+      //Valores que serao repassados para meu objeto pages: Array
       {component: HomePage, title: 'Home', icon: 'home'},
       {component: MenuTestPage, title: 'Menu Test', icon: 'menu'}
     ];
@@ -32,10 +33,23 @@ fala que o StatusBar é um estilo default */
       StatusBar.styleDefault();
     });
   }
-  openPage(page: any) : void {
+  openPage(page: any, menuSide: string) : void {
     this.rootPage = page.component
+    this.menuCtrl.close(menuSide);
   }
+
+  menuOpened() : void {
+    console.log('Abriu');
+  }
+
 }
 /* Aqui chama o metodo ionicBootstrap(MyApp) este é o atributo que inicializa
 nossa apliação*/
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp, [], {
+  menuType: 'push',
+  platforms: {
+    ios: {
+      menuType: 'overlay',
+    }
+  }
+});
