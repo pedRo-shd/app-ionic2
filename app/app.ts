@@ -4,7 +4,9 @@ import { ionicBootstrap, Platform, MenuController} from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { HomePage } from './pages/home/home';
-import {MenuTestPage } from './pages/menu-test/menu-test';
+import { MenuTestPage } from './pages/menu-test/menu-test'
+import { GeneratedTestPage } from './pages/generated-test/generated-test';
+
 
 /* Este template */
 @Component({
@@ -24,7 +26,8 @@ fala que o StatusBar é um estilo default */
     this.pages = [
       //Valores que serao repassados para meu objeto pages: Array
       {component: HomePage, title: 'Home', icon: 'home'},
-      {component: MenuTestPage, title: 'Menu Test', icon: 'menu'}
+      {component: MenuTestPage, title: 'Menu Test', icon: 'menu'},
+      {component: GeneratedTestPage, title: 'Generated Test', icon: 'home'},
     ];
 
     platform.ready().then(() => {

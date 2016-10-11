@@ -18,7 +18,8 @@
 </ion-menu>
 
 
-<ion-menu [content]="menuContent" side="right" type="push" id="menu2">
+
+<ion-menu [content]="menuContent" side="right" type="push" id="menu2" (ionOpen)="menuOpened()">
 
   <ion-toolbar>
     <ion-title>Menu Secundário</ion-title>
