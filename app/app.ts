@@ -2,6 +2,8 @@
 import { Component } from '@angular/core';
 import { ionicBootstrap, Platform, MenuController} from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
+import { ProviderService } from './providers/provider-service/provider-service';
+
 
 import { HomePage } from './pages/home/home';
 import { MenuTestPage } from './pages/menu-test/menu-test'
@@ -48,7 +50,7 @@ fala que o StatusBar é um estilo default */
 }
 /* Aqui chama o metodo ionicBootstrap(MyApp) este é o atributo que inicializa
 nossa apliação*/
-ionicBootstrap(MyApp, [], {
+ionicBootstrap(MyApp, [ProviderService], {
   menuType: 'push',
   platforms: {
     ios: {
