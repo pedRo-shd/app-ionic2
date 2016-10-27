@@ -11,7 +11,7 @@ import { GeneratedTestPage } from './pages/generated-test/generated-test';
 import { AlertPage } from './pages/alert/alert';
 import { ButtonPage } from './pages/button/button';
 import { CardPage } from './pages/card/card';
-
+import { IconTestPage } from './pages/icon-test/icon-test';
 
 /* Este template */
 @Component({
@@ -32,10 +32,11 @@ fala que o StatusBar é um estilo default */
       //Valores que serao repassados para meu objeto pages: Array
       {component: HomePage, title: 'Home', icon: 'home'},
       {component: MenuTestPage, title: 'Menu Test', icon: 'menu'},
-      {component: GeneratedTestPage, title: 'Generated Test', icon: 'home'},
+      {component: GeneratedTestPage, title: 'Generated Test', icon: 'albums'},
       {component: AlertPage, title: 'Alert', icon: 'alert'},
-      {component: ButtonPage, title: 'Buttons', icon: 'heart'},
-      {component: CardPage, title: 'Card', icon: 'menu'}
+      {component: ButtonPage, title: 'Buttons', icon: 'arrow-dropright-circle'},
+      {component: CardPage, title: 'Card', icon: 'card'},
+      {component: IconTestPage, title: 'Icon', icon: 'apps'}
     ];
 
     platform.ready().then(() => {
