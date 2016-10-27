@@ -10,6 +10,7 @@ import { MenuTestPage } from './pages/menu-test/menu-test'
 import { GeneratedTestPage } from './pages/generated-test/generated-test';
 import { AlertPage } from './pages/alert/alert';
 import { ButtonPage } from './pages/button/button';
+import { CardPage } from './pages/card/card';
 
 
 /* Este template */
@@ -33,7 +34,8 @@ fala que o StatusBar é um estilo default */
       {component: MenuTestPage, title: 'Menu Test', icon: 'menu'},
       {component: GeneratedTestPage, title: 'Generated Test', icon: 'home'},
       {component: AlertPage, title: 'Alert', icon: 'alert'},
-      {component: ButtonPage, title: 'Buttons', icon: 'heart'}
+      {component: ButtonPage, title: 'Buttons', icon: 'heart'},
+      {component: CardPage, title: 'Card', icon: 'menu'}
     ];
 
     platform.ready().then(() => {

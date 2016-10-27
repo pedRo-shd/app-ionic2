@@ -1,0 +1,69 @@
+<!--
+  Generated template for the CardPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>Card</ion-title>
+
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      <p align="center">TESTE</p>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>TESTE-2</p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <img src="./../../images/hacker.jpg" >
+    <ion-card-content>
+      <ion-card-title>AnonHack</ion-card-title>
+      <p>TESTE-3</p>
+    </ion-card-content>
+
+    <ion-row no-padding> <!-- Cria uma linha -->
+      <ion-col> <!-- Cria uma coluna -->
+        <button clear small>
+          <ion-icon name="star"></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+
+        <ion-col>
+          <button clear small>
+            <ion-icon name="musical-notes"></ion-icon>
+            Music
+          </button>
+        </ion-col>
+
+        <ion-col>
+          <button clear small>
+            <ion-icon name="share"></ion-icon>
+            Share
+          </button>
+        </ion-col>
+
+    </ion-row>
+
+  </ion-card>
+
+    <button block (click)="pushPage()">Voltar</button>
+
+</ion-content>
