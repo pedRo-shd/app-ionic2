@@ -23,8 +23,10 @@ export class InputsPage {
 entrar () {
   let texto = ('Login: ' + this.login + ', Senha: ' + this.senha);
   let alert = this.alertCtrl.create({
+    buttons: ['Ok', 'Cancel'],
     title: 'Entrando...',
     message: texto
+
   });
   alert.present();
   }
