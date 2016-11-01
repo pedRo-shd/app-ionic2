@@ -14,6 +14,7 @@ import { CardPage } from './pages/card/card';
 import { IconTestPage } from './pages/icon-test/icon-test';
 import { InputsPage } from './pages/inputs/inputs';
 import { ListTestPage } from './pages/list-test/list-test';
+import { GridPage } from './pages/grid/grid';
 
 /* Este template */
 @Component({
@@ -40,7 +41,8 @@ fala que o StatusBar é um estilo default */
       {component: CardPage, title: 'Card', icon: 'card'},
       {component: IconTestPage, title: 'Icon', icon: 'apps'},
       {component: InputsPage, title: 'Entrar', icon: 'contact'},
-      {component: ListTestPage, title: 'Lista', icon: 'menu'}
+      {component: ListTestPage, title: 'Lista', icon: 'menu'},
+      {component: GridPage, title: 'Grid', icon: 'menu'}
     ];
 
     platform.ready().then(() => {
