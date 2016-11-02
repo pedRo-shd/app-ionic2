@@ -19,6 +19,7 @@ import { ModalPage } from './pages/modal/modal';
 import { ModalLoginPage } from './pages/modal-login/modal-login';
 import { NavigationTestPage } from './pages/navigation-test/navigation-test';
 import { TabTestPage } from './pages/tab-test/tab-test';
+import { ToastTestPage } from './pages/toast-test/toast-test';
 
 
 
@@ -52,7 +53,8 @@ fala que o StatusBar é um estilo default */
       {component: ModalPage, title: 'Modal', icon: 'home'},
       {component: ModalLoginPage, title: 'Modal Login', icon: 'menu'},
       {component: NavigationTestPage, title: 'Navigation Test', icon: 'home'},
-      {component: TabTestPage, title: 'Tab Navigation', icon: 'menu'}
+      {component: TabTestPage, title: 'Tab Navigation', icon: 'menu'},
+      {component: ToastTestPage, title: 'Mensagens de Eventos', icon: 'menu'}
     ];
 
     platform.ready().then(() => {
