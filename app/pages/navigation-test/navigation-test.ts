@@ -1,23 +1,24 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { NavigationTestPage } from './../navigation-test/navigation-test';
+import { CardPage } from './../card/card';
+
 /*
-  Generated class for the CardPage page.
+  Generated class for the NavigationTestPage page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/card/card.html',
+  templateUrl: 'build/pages/navigation-test/navigation-test.html',
 })
-export class CardPage {
+export class NavigationTestPage {
 
   constructor(public navCtrl: NavController) {
 
   }
 
-  voltar() : void {
-    this.navCtrl.pop(NavigationTestPage);
+  openPage() {
+    this.navCtrl.push( CardPage );
   }
 
 }
