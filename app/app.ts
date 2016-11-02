@@ -18,6 +18,9 @@ import { GridPage } from './pages/grid/grid';
 import { ModalPage } from './pages/modal/modal';
 import { ModalLoginPage } from './pages/modal-login/modal-login';
 import { NavigationTestPage } from './pages/navigation-test/navigation-test';
+import { TabTestPage } from './pages/tab-test/tab-test';
+
+
 
 /* Este template */
 @Component({
@@ -48,7 +51,8 @@ fala que o StatusBar é um estilo default */
       {component: GridPage, title: 'Grid', icon: 'menu'},
       {component: ModalPage, title: 'Modal', icon: 'home'},
       {component: ModalLoginPage, title: 'Modal Login', icon: 'menu'},
-      {component: NavigationTestPage, title: 'Navigation Test', icon: 'home'}
+      {component: NavigationTestPage, title: 'Navigation Test', icon: 'home'},
+      {component: TabTestPage, title: 'Tab Navigation', icon: 'menu'}
     ];
 
     platform.ready().then(() => {
